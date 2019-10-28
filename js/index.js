@@ -36,7 +36,70 @@ const siteContent = {
     "copyright" : "Copyright Great Idea! 2018"
   },
 };
-
+console.log(document)
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+// let navItems = [siteContent['nav']]
+// siteContent.nav.forEach(item => navItems.push(item))
+// let newt = []
+// console.log(navItems[0])
+// .navItems.forEach(element => {
+//   newt.push(element)
+// });
+// console.log(newt)
+let atag = document.querySelectorAll('a')
+console.log(atag)
+// for (let i = 0; i < newt.length; i++){
+//   atag[i].textContent = newt[i + 1]
+// }
+
+atag[0].textContent = siteContent.nav["nav-item-1"]
+atag[1].textContent = siteContent.nav["nav-item-2"]
+atag[2].textContent = siteContent.nav["nav-item-3"]
+atag[3].textContent = siteContent.nav["nav-item-4"]
+atag[4].textContent = siteContent.nav["nav-item-5"]
+atag[5].textContent = siteContent.nav["nav-item-6"]
+
+const cta = document.querySelector('.cta-text h1');
+const brTag = document.createElement('br');
+const brTag2 = document.createElement('br');
+const dom = document.createTextNode('DOM');
+const is = document.createTextNode('Is');
+const awesome = document.createTextNode('Awesome');
+console.log(cta);
+cta.append(dom);
+cta.appendChild(is);
+cta.appendChild(awesome);
+cta.insertBefore(brTag, is);
+cta.insertBefore(brTag2, awesome)
+
+let ctaImg = document.querySelector('#cta-img')
+ctaImg.setAttribute('src', siteContent['cta']['img-src'])
+
+let ctaBtn = document.querySelector('.cta-text button')
+ctaBtn.textContent = 'Get Started'
+
+
+
+
+
+
+
+
+
+
+
+
+
+// for (let a = 0; a < atag.length; a++){
+//   let name = []
+//   name.push(siteContent.nav[a])
+//   console.log(siteContent.nav[a])
+//   console.log(name)
+//   atag[a].innerHTML = name
+  
+//     // atag[a].innerHTML = siteContent['nav'][a]
+//   }
+
+
